@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <P>PLEASE INPUT FIRST NUMBER</P>
+    <input type="number" id = "aleph">
+    <P>PLEASE INPUT SECOND NUMBER</P>
+    <input type="number" id = "bet">
+    <P>PLEASE INPUT OPERATION</P>
+    <select id = "gimel">
+        <option value="">select</option>
+        <option value="1">addition</option>
+        <option value="2">subtraction</option>
+        <option value="3">multiplication</option>
+    </select>
+
+    <button onclick="console.log(operacion())">calculate</button>
+    <p id ="r"></p>
+
+    <script>
+        const operacion = () =>{
+            let a = document.getElementById("aleph").value;
+            let b = document.getElementById("bet").value;
+            let c = document.getElementById("gimel").value;
+            var d;
+
+            if (c == "1") d = parseInt(a) + parseInt(b);
+            if (c == "2") d = a - b;
+            if (c == "3") d = a * b;
+            document.getElementById("r").innerHTML = d;
+            return d;
+        }
+
+
+    </script>
+    
+</body>
+</html>
